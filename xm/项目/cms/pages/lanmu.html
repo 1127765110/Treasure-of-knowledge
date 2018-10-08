@@ -1,0 +1,44 @@
+<div class="lanmuContent">
+	<div class="btns">
+		<button class="btn btn-success">添加</button>
+		<button class="btn btn-danger">批量删除</button>
+	</div>
+	<table class="table table-bordered table-">
+		<thead>
+			<tr>
+				<th>编号</th>
+				<th>栏目名称</th>
+				<th></th>
+				<th></th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class="hidden">
+				<td><input type="checkbox" id="" name=""></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td>
+					<i class="glyphicon glyphicon-pencil"></i>
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					<i class="glyphicon glyphicon-trash"></i>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<script type="text/javascript">
+	$(function(){
+		//设置当前栏目内容区域的高度
+		$(".lanmuContent").height($("rightDiv").height()-100);
+
+		//请求所有栏目信息
+		$.get("",function(results){
+			var lanmu=results.data;
+			console.log("所有栏目信息:",results)
+		});
+
+
+	})
+</script>
